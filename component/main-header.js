@@ -3,10 +3,12 @@ import Image from "next/image";
 
 import LogoImg from "@/assets/logo.png";
 import classes from "./main-header.module.css";
+import MainHeaderBackground from "./main-header/main-header-background";
 
 export default function MainHeader() {
   return (
     <>
+      <MainHeaderBackground />
       <header className={classes.header}>
         <Link href="/" className={classes.logo}>
           {/* here we are using built in next js image component for lazy loading and webp format for this image */}
