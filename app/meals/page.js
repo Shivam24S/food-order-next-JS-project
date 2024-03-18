@@ -2,8 +2,10 @@ import MealsGrid from "@/component/meals/meals-grid";
 import classes from "./page.module.css";
 
 import Link from "next/link";
+import { getMeals } from "@/lib/meals";
 
-export default function Meals() {
+export default async function Meals() {
+  const meals = await getMeals();
   return (
     <>
       <header className={classes.header}>
@@ -19,7 +21,7 @@ export default function Meals() {
         </p>
       </header>
       <main className={classes.main}>
-        <MealsGrid meals={[]} />
+        <MealsGrid meals={meals} />
       </main>
     </>
   );
