@@ -1,6 +1,7 @@
 import ImagePicker from "@/component/meals/image-picker";
 import classes from "./page.module.css";
 import { mealFormData } from "@/lib/action";
+import MealFormStatus from "@/component/meals/meal-form-status";
 
 export default function ShareMealPage() {
   // separating server action in other file so if i want to use use client i can but if they both in one component
@@ -45,7 +46,7 @@ export default function ShareMealPage() {
           </p>
           <ImagePicker name="image" label="Your Image" />
           <p className={classes.actions}>
-            <button type="submit">Share Meal</button>
+            <MealFormStatus />
           </p>
         </form>
       </main>
