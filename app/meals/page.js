@@ -5,6 +5,12 @@ import Link from "next/link";
 import { getMeals } from "@/lib/meals";
 import { Suspense } from "react";
 
+// setting component based MetaData
+export const metadata = {
+  title: "all meals",
+  description: "Delicious meals, shared by a food-loving community.",
+};
+
 async function MealsData() {
   const meals = await getMeals();
 

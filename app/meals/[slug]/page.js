@@ -4,6 +4,19 @@ import { notFound } from "next/navigation";
 import { getMeal } from "@/lib/meals";
 import classes from "./page.module.css";
 
+//
+// setting component based  dynamic route metaData
+export async function generateMetadata({ params }) {
+  const meal = getMeal(params.slug);
+  return {
+    title: meal.title,
+    description: meal.summary,
+  };
+  if (!meal) {
+    notFound();
+  }
+}
+
 export default function DynamicRoute({ params }) {
   const meal = getMeal(params.slug);
 
