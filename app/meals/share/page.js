@@ -1,11 +1,17 @@
+"use client";
 import ImagePicker from "@/component/meals/image-picker";
 import classes from "./page.module.css";
 import { mealFormData } from "@/lib/action";
 import MealFormStatus from "@/component/meals/meal-form-status";
+import { useFormState } from "react-dom";
 
 export default function ShareMealPage() {
   // separating server action in other file so if i want to use use client i can but if they both in one component
   //  i cant use both so we have to septate them
+
+  // handling error efficient way showing error message from server side
+  // spacial react-dom hook  it take two argument first action function and second initialValue
+  const [state, formAction] = useFormState(mealFormData, { message: null });
 
   return (
     <>
@@ -16,7 +22,7 @@ export default function ShareMealPage() {
         <p>Or any other meal you feel needs sharing!</p>
       </header>
       <main className={classes.main}>
-        <form className={classes.form} action={mealFormData}>
+        <form className={classes.form} action={formAction}>
           <div className={classes.row}>
             <p>
               <label htmlFor="name">Your name</label>
@@ -43,6 +49,12 @@ export default function ShareMealPage() {
               rows="10"
               required
             ></textarea>
+          </p>
+          <p>
+            {" "}
+            {state.message && (
+              <p>invalidate input please correct your input</p>
+            )}{" "}
           </p>
           <ImagePicker name="image" label="Your Image" />
           <p className={classes.actions}>
