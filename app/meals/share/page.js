@@ -1,21 +1,10 @@
 import ImagePicker from "@/component/meals/image-picker";
 import classes from "./page.module.css";
+import { mealFormData } from "@/lib/action";
 
 export default function ShareMealPage() {
-  // handling form submission using server Side action
-  async function mealFormData(formData) {
-    "use server";
-
-    const meal = {
-      title: formData.get("title"),
-      image: formData.get("image"),
-      creator: formData.get("name"),
-      summary: formData.get("summary"),
-      instructions: formData.get("instructions"),
-      creator_email: formData.get("email"),
-    };
-    console.log("meal Data", meal);
-  }
+  // separating server action in other file so if i want to use use client i can but if they both in one component
+  //  i cant use both so we have to septate them
 
   return (
     <>
