@@ -44,9 +44,11 @@ export default function ImagePicker({ name, label }) {
             type="file"
             className={classes.input}
             id={name}
-            accept="image/png ,image/jpeg"
+            name={name}
+            accept="image/png,image/jpeg"
             ref={imageInput}
             onChange={handlePickedImage}
+            required
           />
         </div>
         <button
