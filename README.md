@@ -1,5 +1,7 @@
 Project Description
+
 <a href="https://tasty-junction-food.netlify.app/">Tasty Junction</a>
+
 Tasty Junction is a vibrant web application built using Next.js, leveraging file-based routing for efficient navigation and CSS modules for styling. This platform serves as a dynamic food community where users can share and explore a diverse array of delicious dishes, fostering a sense of culinary creativity and community engagement.
 
 Key Features:
