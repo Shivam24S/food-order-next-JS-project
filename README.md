@@ -10,8 +10,6 @@ User-Friendly Interface: Tasty Junction boasts a user-friendly interface designe
 
 Dynamic Content Sharing: Users can share their favorite recipes, culinary creations, and cooking tips with the community through valid form filling. The platform encourages users to showcase their culinary skills and contribute to a growing repository of mouthwatering dishes.
 
-Community Engagement: Tasty Junction fosters a sense of community and interaction among food enthusiasts. Users can engage with shared content by liking, commenting, and bookmarking recipes, fostering connections and inspiring culinary exploration.
-
 Valid Form Filling: To maintain the quality and authenticity of shared content, Tasty Junction implements a valid form-filling mechanism. Users are required to provide accurate details and descriptions when submitting recipes, ensuring reliability and trustworthiness within the community.
 
 Technology Stack:
