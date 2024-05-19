@@ -125,3 +125,24 @@
     opacity: 0;
   }
 }
+
+@media only screen and (min-width: 320px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    justify-content: center;
+    padding: 2rem 1rem;
+    margin: 1rem;
+  }
+  .header img {
+    object-fit: cover;
+    margin-left: -20px;
+  }
+  .headerText h1 {
+    font-size: 2rem;
+  }
+  .instructions {
+    margin: 20px;
+  }
+}
